@@ -6,19 +6,23 @@ import {
 } from '@devexpress/dx-react-grid';
 import {
   Grid,
-  Table,
+  VirtualTable,
   TableHeaderRow,
   TableTreeColumn,
 } from '@devexpress/dx-react-grid-material-ui';
 
-import {
-  generateRows,
-  defaultColumnValues,
-} from './demo-data/generator';
+import { Loading } from './components/loading';
 
+const URL = 'https://js.devexpress.com/Demos/Mvc/api/treeListData';
+const ROOT_ID = '';
+
+const getRowId = row => row.id;
 const getChildRows = (row, rootRows) => {
-  const childRows = rootRows.filter(r => r.parentId === (row ? row.id : null));
-  return childRows.length ? childRows : null;
+  const childRows = rootRows.filter(r => r.parentId === (row ? row.id : ROOT_ID));
+  if (childRows.length) {
+    return childRows;
+  }
+  return row && row.hasItems ? [] : null;
 };
 
 export default class App extends React.PureComponent {
@@ -28,43 +32,82 @@ export default class App extends React.PureComponent {
     this.state = {
       columns: [
         { name: 'name', title: 'Name' },
-        { name: 'sex', title: 'Sex' },
-        { name: 'city', title: 'City' },
-        { name: 'car', title: 'Car' },
+        { name: 'size', title: 'Size', getCellValue: row => (row.size ? `${Math.ceil(row.size / 1024)} KB` : '') },
+        { name: 'createdDate', title: 'Created Date', getCellValue: row => new Date(Date.parse(row.createdDate)).toLocaleString() },
+        { name: 'modifiedDate', title: 'Modified Date', getCellValue: row => new Date(Date.parse(row.modifiedDate)).toLocaleString() },
       ],
       tableColumnExtensions: [
-        { columnName: 'name', width: 300 },
+        { columnName: 'name', width: 400 },
+        { columnName: 'size', width: 120, align: 'right' },
       ],
-      defaultExpandedRowIds: [0, 1],
-      data: generateRows({
-        columnValues: {
-          id: ({ index }) => index,
-          parentId: ({ index, random }) => (index > 0 ? Math.trunc((random() * index) / 2) : null),
-          ...defaultColumnValues,
-        },
-        length: 20,
-      }),
+      expandedRowIds: [],
+      loading: false,
+      data: [],
     };
+
+    this.changeExpandedRowIds = this.changeExpandedRowIds.bind(this);
+  }
+
+  componentDidMount() {
+    this.loadData();
+  }
+
+  componentDidUpdate() {
+    this.loadData();
+  }
+
+  changeExpandedRowIds(expandedRowIds) {
+    this.setState({ expandedRowIds });
+  }
+
+  loadData() {
+    const { expandedRowIds, data, loading } = this.state;
+
+    if (loading) {
+      return;
+    }
+
+    const rowIdsWithNotLoadedChilds = [ROOT_ID, ...expandedRowIds]
+      .filter(rowId => data.findIndex(row => row.parentId === rowId) === -1);
+    
+    if (rowIdsWithNotLoadedChilds.length) {
+      if (loading) return;
+      this.setState({ loading: true });
+      Promise.all(rowIdsWithNotLoadedChilds
+        .map(rowId => fetch(`${URL}?parentIds=${rowId}`, { mode: 'cors' })
+          .then(response => response.json())))
+        .then((loadedData) => {
+          this.setState({
+            data: data.concat(...loadedData),
+            loading: false,
+          });
+        })
+        .catch(() => this.setState({ loading: false }));
+    }
   }
 
   render() {
     const {
-      data, columns, tableColumnExtensions, defaultExpandedRowIds,
+      data, columns, tableColumnExtensions, expandedRowIds, loading,
     } = this.state;
 
+    console.log(data);
+
     return (
-      <Paper>
+      <Paper style={{ position: 'relative' }}>
         <Grid
           rows={data}
           columns={columns}
+          getRowId={getRowId}
         >
           <TreeDataState
-            defaultExpandedRowIds={defaultExpandedRowIds}
+            expandedRowIds={expandedRowIds}
+            onExpandedRowIdsChange={this.changeExpandedRowIds}
           />
           <CustomTreeData
             getChildRows={getChildRows}
           />
-          <Table
+          <VirtualTable
             columnExtensions={tableColumnExtensions}
           />
           <TableHeaderRow />
@@ -72,6 +115,7 @@ export default class App extends React.PureComponent {
             for="name"
           />
         </Grid>
+        {loading && <Loading />}
       </Paper>
     );
   }
