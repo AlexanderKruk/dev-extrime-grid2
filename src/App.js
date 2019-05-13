@@ -1,16 +1,18 @@
 import React from 'react';
 import './App.css';
-import comments from './comments';
+import data from './data';
 
 import { Grid, Table, TableHeaderRow } from '@devexpress/dx-react-grid-material-ui';
 
 const App = () => (
   <Grid
-    rows={ comments }
+    rows={ data }
     columns={[
-      { name: 'name', title: 'Name' },
-      { name: 'email', title: 'Email' },
-      { name: 'body', title: 'Body' },
+      { name: 'ticker', title: 'Coin' },
+      { name: 'period', title: 'Period' },
+      { name: '1d_volume', title: 'Volume' },
+      { name: '1d_volume_%', title: 'Volume %' },
+      { name: '1d_price', title: 'Price' },
     ]}>
     <Table />
     <TableHeaderRow />
