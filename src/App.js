@@ -16,10 +16,13 @@ import {
   defaultColumnValues,
 } from './demo-data/generator';
 
+import data2 from './demo-data/data';
+
 const getChildRows = (row, rootRows) => {
   const childRows = rootRows.filter(r => r.parentId === (row ? row.id : null));
   return childRows.length ? childRows : null;
 };
+
 
 export default class App extends React.PureComponent {
   constructor(props) {
@@ -27,23 +30,17 @@ export default class App extends React.PureComponent {
 
     this.state = {
       columns: [
-        { name: 'name', title: 'Name' },
-        { name: 'sex', title: 'Sex' },
-        { name: 'city', title: 'City' },
-        { name: 'car', title: 'Car' },
+        { name: 'coin', title: 'Coin' },
+        { name: 'period', title: 'Period' },
+        { name: 'volume', title: 'Volume' },
+        { name: 'volume_%', title: 'Volume %' },
+        { name: 'price', title: 'price' }
       ],
       tableColumnExtensions: [
-        { columnName: 'name', width: 300 },
+        { columnName: 'coin', width: 300 },
       ],
-      defaultExpandedRowIds: [0, 1],
-      data: generateRows({
-        columnValues: {
-          id: ({ index }) => index,
-          parentId: ({ index, random }) => (index > 0 ? Math.trunc((random() * index) / 2) : null),
-          ...defaultColumnValues,
-        },
-        length: 20,
-      }),
+      defaultExpandedRowIds: [],
+      data: data2
     };
   }
 
@@ -69,7 +66,7 @@ export default class App extends React.PureComponent {
           />
           <TableHeaderRow />
           <TableTreeColumn
-            for="name"
+            for="period"
           />
         </Grid>
       </Paper>
