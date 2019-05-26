@@ -3,18 +3,21 @@ import Paper from '@material-ui/core/Paper';
 import {
   TreeDataState,
   CustomTreeData,
+  FilteringState,
+  IntegratedFiltering,
 } from '@devexpress/dx-react-grid';
 import {
   Grid,
   Table,
   TableHeaderRow,
   TableTreeColumn,
+  TableFilterRow,
 } from '@devexpress/dx-react-grid-material-ui';
 
-import {
-  generateRows,
-  defaultColumnValues,
-} from './demo-data/generator';
+// import {
+//   generateRows,
+//   defaultColumnValues,
+// } from './demo-data/generator';
 
 import data2 from './demo-data/data';
 
@@ -55,6 +58,8 @@ export default class App extends React.PureComponent {
           rows={data}
           columns={columns}
         >
+          <FilteringState defaultFilters={[]} />
+          <IntegratedFiltering />
           <TreeDataState
             defaultExpandedRowIds={defaultExpandedRowIds}
           />
@@ -65,6 +70,7 @@ export default class App extends React.PureComponent {
             columnExtensions={tableColumnExtensions}
           />
           <TableHeaderRow />
+          <TableFilterRow />
           <TableTreeColumn
             for="period"
           />

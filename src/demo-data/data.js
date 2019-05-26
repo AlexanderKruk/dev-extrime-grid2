@@ -11,8 +11,8 @@ export default [
     {
         "id": 2,
         "parentId": 1,
-        "coin": "06.05-12.05",
-        "period": "1w",
+        "coin": "Etherium (ETH)",
+        "period": "1w (06.05-12.05)",
         "volume": 45355.33 ,
         "volume_%": "+12%",
         "price": 0.02690529
@@ -236,7 +236,7 @@ export default [
        {
         "id": 28,
         "parentId": null,
-        "coin": "Etherium (ETH)",
+        "coin": "Litecoin (LTC)",
         "period": "1d",
         "volume": 6465.04 ,
         "volume_%": "+15%",
@@ -245,7 +245,7 @@ export default [
       {
         "id": 29,
         "parentId": null,
-        "coin": "Etherium (ETH)",
+        "coin": "Binance Coin (BNB)",
         "period": "1d",
         "volume": 6465.04 ,
         "volume_%": "+15%",
@@ -353,7 +353,7 @@ export default [
       {
         "id": 41,
         "parentId": null,
-        "coin": "Etherium (ETH)",
+        "coin": "Bitcoin (BTC)",
         "period": "1d",
         "volume": 6465.04 ,
         "volume_%": "+15%",
