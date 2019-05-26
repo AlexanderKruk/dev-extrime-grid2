@@ -5,6 +5,8 @@ import {
   CustomTreeData,
   FilteringState,
   IntegratedFiltering,
+  PagingState,
+  IntegratedPaging,
 } from '@devexpress/dx-react-grid';
 import {
   Grid,
@@ -12,6 +14,7 @@ import {
   TableHeaderRow,
   TableTreeColumn,
   TableFilterRow,
+  PagingPanel,
 } from '@devexpress/dx-react-grid-material-ui';
 
 // import {
@@ -43,13 +46,14 @@ export default class App extends React.PureComponent {
         { columnName: 'coin', width: 300 },
       ],
       defaultExpandedRowIds: [],
-      data: data2
+      data: data2,
+      pageSizes: [50, 100, 150, 0]
     };
   }
 
   render() {
     const {
-      data, columns, tableColumnExtensions, defaultExpandedRowIds,
+      data, columns, tableColumnExtensions, defaultExpandedRowIds, pageSizes
     } = this.state;
 
     return (
@@ -60,6 +64,11 @@ export default class App extends React.PureComponent {
         >
           <FilteringState defaultFilters={[]} />
           <IntegratedFiltering />
+          <PagingState
+            defaultCurrentPage={0}
+            defaultPageSize={50}
+          />
+          <IntegratedPaging />
           <TreeDataState
             defaultExpandedRowIds={defaultExpandedRowIds}
           />
@@ -70,6 +79,9 @@ export default class App extends React.PureComponent {
             columnExtensions={tableColumnExtensions}
           />
           <TableHeaderRow />
+          <PagingPanel
+            pageSizes={pageSizes}
+          />
           <TableFilterRow />
           <TableTreeColumn
             for="period"
