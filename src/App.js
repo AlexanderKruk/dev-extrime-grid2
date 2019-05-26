@@ -4,6 +4,7 @@ import {
   TreeDataState, CustomTreeData,
   FilteringState, IntegratedFiltering,
   DataTypeProvider, DataTypeProviderProps,
+  SortingState, IntegratedSorting,
 } from '@devexpress/dx-react-grid';
 import { createStyles, withStyles, WithStyles, Theme } from '@material-ui/core/styles';
 import {
@@ -77,16 +78,16 @@ export default class App extends React.PureComponent {
       columns: [
         { name: 'coin', title: 'Coin' },
         { name: 'period', title: 'Period' },
-        { name: 'volumeAmount', title: 'Volume' },
-        { name: 'volumePerc', title: 'Volume %' },
-        { name: 'price', title: 'price' }
+        { name: 'price', title: 'Price (BTC)' },
+        { name: 'volumeAmount', title: 'Volume (BTC)' },
+        { name: 'volumePerc', title: 'Volume %' }
       ],
       tableColumnExtensions: [
         { columnName: 'coin', width: 200 },
         { columnName: 'period', width: 330 },
-        { columnName: 'volumeAmount', width: 150 },
-        { columnName: 'volumePerc', width: 150 },
-        { columnName: 'price', width: 150 },
+        { columnName: 'volumeAmount', width: 130, align: 'right' },
+        { columnName: 'volumePerc', width: 100, align: 'right' },
+        { columnName: 'price', width: 150},
       ],
       defaultExpandedRowIds: [],
       data: data2,
@@ -111,6 +112,10 @@ export default class App extends React.PureComponent {
           rows={data}
           columns={columns}
         >
+          <SortingState
+            defaultSorting={[{ columnName: 'volumePerc', direction: 'desc' }]}
+          />
+          <IntegratedSorting />
           <FilteringState 
             defaultFilters={[]}
             columnExtensions={filteringStateColumnExtensions} />
@@ -133,7 +138,7 @@ export default class App extends React.PureComponent {
           <Table
             columnExtensions={tableColumnExtensions}
           />
-          <TableHeaderRow />
+          <TableHeaderRow showSortingControls />
           <TableFilterRow showFilterSelector={true}/>
           <TableTreeColumn
             for="period"
