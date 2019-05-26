@@ -34,9 +34,8 @@ const styles = ({ typography }: Theme) => createStyles({
 type CurrencyFormatterProps = DataTypeProvider.ValueFormatterProps & WithStyles<typeof styles>;
 
 const availableFilterOperations: string[] = [
-  'equal', 'notEqual',
-  'greaterThan', 'greaterThanOrEqual',
-  'lessThan', 'lessThanOrEqual',
+  'greaterThan', 
+  'lessThan', 'equal'
 ];
 
 const getColor = (amount: number) : string => {
@@ -89,13 +88,21 @@ export default class App extends React.PureComponent {
       ],
       defaultExpandedRowIds: [],
       data: data2,
-      pageSizes: [50, 100, 150, 0]
+      pageSizes: [50, 100, 150, 0],
+      filteringStateColumnExtensions: [
+        { columnName: 'period', filteringEnabled: false },
+      ],
     };
   }
 
   render() {
     const {
-      data, columns, tableColumnExtensions, defaultExpandedRowIds, pageSizes
+      data, 
+      columns, 
+      tableColumnExtensions, 
+      defaultExpandedRowIds, 
+      pageSizes, 
+      filteringStateColumnExtensions
     } = this.state;
 
     return (
@@ -104,7 +111,9 @@ export default class App extends React.PureComponent {
           rows={data}
           columns={columns}
         >
-          <FilteringState defaultFilters={[]} />
+          <FilteringState 
+            defaultFilters={[]}
+            columnExtensions={filteringStateColumnExtensions} />
           <IntegratedFiltering />
           <PagingState
             defaultCurrentPage={0}
@@ -113,6 +122,14 @@ export default class App extends React.PureComponent {
           <IntegratedPaging />
 
           <CurrencyTypeProvider for="volumePerc" />
+          <DataTypeProvider
+            for="volumeAmount"
+            availableFilterOperations={availableFilterOperations}
+          />
+          <DataTypeProvider
+            for="price"
+            availableFilterOperations={availableFilterOperations}
+          />
           <TreeDataState
             defaultExpandedRowIds={defaultExpandedRowIds}
           />
@@ -126,7 +143,7 @@ export default class App extends React.PureComponent {
           <PagingPanel
             pageSizes={pageSizes}
           />
-          <TableFilterRow />
+          <TableFilterRow showFilterSelector={true}/>
           <TableTreeColumn
             for="period"
           />

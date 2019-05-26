@@ -5,7 +5,7 @@ export default [
       "coin": "Etherium (ETH)",
       "period": "1d",
       "volumeAmount": 6465.04 ,
-      "volumePerc": "+15",
+      "volumePerc": -15,
       "price": 0.02690229
     },
     {
@@ -14,7 +14,7 @@ export default [
         "coin": "Etherium (ETH)",
         "period": "1w (06.05-12.05)",
         "volumeAmount": 45355.33 ,
-        "volumePerc": "+12",
+        "volumePerc": 12,
         "price": 0.02690529
       },
       {
@@ -239,7 +239,7 @@ export default [
         "coin": "Litecoin (LTC)",
         "period": "1d",
         "volumeAmount": 6465.04 ,
-        "volumePerc": "+15",
+        "volumePerc": 12,
         "price": 0.02690229
       },
       {
