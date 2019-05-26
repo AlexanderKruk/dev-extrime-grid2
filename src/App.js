@@ -1,13 +1,12 @@
 import * as React from 'react';
 import Paper from '@material-ui/core/Paper';
 import {
-  TreeDataState,
-  CustomTreeData,
-  FilteringState,
-  IntegratedFiltering,
-  PagingState,
-  IntegratedPaging,
+  TreeDataState, CustomTreeData,
+  FilteringState, IntegratedFiltering,
+  PagingState, IntegratedPaging,
+  DataTypeProvider, DataTypeProviderProps,
 } from '@devexpress/dx-react-grid';
+import { createStyles, withStyles, WithStyles, Theme } from '@material-ui/core/styles';
 import {
   Grid,
   Table,
@@ -24,10 +23,53 @@ import {
 
 import data2 from './demo-data/data';
 
+const styles = ({ typography }: Theme) => createStyles({
+  currency: {
+  },
+  numericInput: {
+  },
+});
+
+
+type CurrencyFormatterProps = DataTypeProvider.ValueFormatterProps & WithStyles<typeof styles>;
+
+const availableFilterOperations: string[] = [
+  'equal', 'notEqual',
+  'greaterThan', 'greaterThanOrEqual',
+  'lessThan', 'lessThanOrEqual',
+];
+
+const getColor = (amount: number) : string => {
+  if (amount < 0) {
+    return '#F44336';
+  }
+  if (amount > 0) {
+    return '#229954';
+  }
+};
+
+
 const getChildRows = (row, rootRows) => {
   const childRows = rootRows.filter(r => r.parentId === (row ? row.id : null));
   return childRows.length ? childRows : null;
 };
+
+
+const CurrencyFormatter = withStyles(styles)(
+  ({ value, classes } : CurrencyFormatterProps) =>
+    <i className={classes.currency} style={{ color: getColor(value) }}>{value}%</i>
+);
+
+
+
+const CurrencyTypeProvider: React.ComponentType<DataTypeProviderProps> =
+  (props: DataTypeProviderProps) => (
+    <DataTypeProvider
+      formatterComponent={CurrencyFormatter}
+      availableFilterOperations={availableFilterOperations}
+      {...props}
+    />
+);
 
 
 export default class App extends React.PureComponent {
@@ -38,8 +80,8 @@ export default class App extends React.PureComponent {
       columns: [
         { name: 'coin', title: 'Coin' },
         { name: 'period', title: 'Period' },
-        { name: 'volume', title: 'Volume' },
-        { name: 'volume_%', title: 'Volume %' },
+        { name: 'volumeAmount', title: 'Volume' },
+        { name: 'volumePerc', title: 'Volume %' },
         { name: 'price', title: 'price' }
       ],
       tableColumnExtensions: [
@@ -69,6 +111,8 @@ export default class App extends React.PureComponent {
             defaultPageSize={50}
           />
           <IntegratedPaging />
+
+          <CurrencyTypeProvider for="volumePerc" />
           <TreeDataState
             defaultExpandedRowIds={defaultExpandedRowIds}
           />

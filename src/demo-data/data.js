@@ -4,8 +4,8 @@ export default [
       "parentId": null,
       "coin": "Etherium (ETH)",
       "period": "1d",
-      "volume": 6465.04 ,
-      "volume_%": "+15%",
+      "volumeAmount": 6465.04 ,
+      "volumePerc": "+15",
       "price": 0.02690229
     },
     {
@@ -13,8 +13,8 @@ export default [
         "parentId": 1,
         "coin": "Etherium (ETH)",
         "period": "1w (06.05-12.05)",
-        "volume": 45355.33 ,
-        "volume_%": "+12%",
+        "volumeAmount": 45355.33 ,
+        "volumePerc": "+12",
         "price": 0.02690529
       },
       {
@@ -22,8 +22,8 @@ export default [
         "parentId": 2,
         "coin": "06.05",
         "period": "1d",
-        "volume": 6323.33 ,
-        "volume_%": "+7%",
+        "volumeAmount": 6323.33 ,
+        "volumePerc": "+7",
         "price": 0.02690529
       },
       {
@@ -31,8 +31,8 @@ export default [
         "parentId": 2,
         "coin": "07.05",
         "period": "1d",
-        "volume": 5899.33 ,
-        "volume_%": "+3%",
+        "volumeAmount": 5899.33 ,
+        "volumePerc": "+3",
         "price": 0.02690529
       },
       {
@@ -40,8 +40,8 @@ export default [
         "parentId": 2,
         "coin": "08.05",
         "period": "1d",
-        "volume": 4642.33 ,
-        "volume_%": "+10%",
+        "volumeAmount": 4642.33 ,
+        "volumePerc": "+10",
         "price": 0.02690529
       },
       {
@@ -49,8 +49,8 @@ export default [
         "parentId": 2,
         "coin": "09.05",
         "period": "1d",
-        "volume": 5700.33 ,
-        "volume_%": "-5%",
+        "volumeAmount": 5700.33 ,
+        "volumePerc": "-5",
         "price": 0.02690529
       },
     {
@@ -58,8 +58,8 @@ export default [
       "parentId": 2,
       "coin": "10.05",
       "period": "1d",
-      "volume": 8532.33 ,
-      "volume_%": "-15%",
+      "volumeAmount": 8532.33 ,
+      "volumePerc": "-15",
       "price": 0.02690529
     },
     {
@@ -67,8 +67,8 @@ export default [
         "parentId": 2,
         "coin": "11.05",
         "period": "1d",
-        "volume": 5321.33 ,
-        "volume_%": "+25%",
+        "volumeAmount": 5321.33 ,
+        "volumePerc": "+25",
         "price": 0.02690529
       },
       {
@@ -76,8 +76,8 @@ export default [
         "parentId": 2,
         "coin": "12.05",
         "period": "1d",
-        "volume": 3542.33 ,
-        "volume_%": "+13%",
+        "volumeAmount": 3542.33 ,
+        "volumePerc": "+13",
         "price": 0.02690529
       },
       {
@@ -85,8 +85,8 @@ export default [
         "parentId": 3,
         "coin": "00:00-04:00",
         "period": "4h",
-        "volume": 1580.33 ,
-        "volume_%": "+4%",
+        "volumeAmount": 1580.33 ,
+        "volumePerc": "+4",
         "price": 0.02690529
       },
       {
@@ -94,8 +94,8 @@ export default [
         "parentId": 3,
         "coin": "04:00-08:00",
         "period": "4h",
-        "volume": 1202.33 ,
-        "volume_%": "+10%",
+        "volumeAmount": 1202.33 ,
+        "volumePerc": "+10",
         "price": 0.02690529
       },
       {
@@ -103,8 +103,8 @@ export default [
         "parentId": 3,
         "coin": "08:00-12:00",
         "period": "4h",
-        "volume": 1502.33 ,
-        "volume_%": "-13%",
+        "volumeAmount": 1502.33 ,
+        "volumePerc": "-13",
         "price": 0.02690529
       },
       {
@@ -112,8 +112,8 @@ export default [
         "parentId": 3,
         "coin": "12:00-16:00",
         "period": "4h",
-        "volume": 1802.33 ,
-        "volume_%": "+6%",
+        "volumeAmount": 1802.33 ,
+        "volumePerc": "+6",
         "price": 0.02690529
       },
       {
@@ -121,8 +121,8 @@ export default [
         "parentId": 3,
         "coin": "16:00-20:00",
         "period": "4h",
-        "volume": 1982.33 ,
-        "volume_%": "+2%",
+        "volumeAmount": 1982.33 ,
+        "volumePerc": "+2",
         "price": 0.02690529
       },
       {
@@ -130,8 +130,8 @@ export default [
         "parentId": 3,
         "coin": "20:00-24:00",
         "period": "4h",
-        "volume": 1023.33 ,
-        "volume_%": "-21%",
+        "volumeAmount": 1023.33 ,
+        "volumePerc": "-21",
         "price": 0.02690529
       },
       {
@@ -139,8 +139,8 @@ export default [
         "parentId": 10,
         "coin": "00:00-01:00",
         "period": "1h",
-        "volume": 250.33 ,
-        "volume_%": "+3%",
+        "volumeAmount": 250.33 ,
+        "volumePerc": "+3",
         "price": 0.02690529
       },
       {
@@ -148,8 +148,8 @@ export default [
         "parentId": 10,
         "coin": "01:00-02:00",
         "period": "1h",
-        "volume": 300.33 ,
-        "volume_%": "+15%",
+        "volumeAmount": 300.33 ,
+        "volumePerc": "+15",
         "price": 0.02690529
       },
       {
@@ -157,8 +157,8 @@ export default [
         "parentId": 10,
         "coin": "02:00-03:00",
         "period": "1h",
-        "volume": 182.33 ,
-        "volume_%": "-50%",
+        "volumeAmount": 182.33 ,
+        "volumePerc": "-50",
         "price": 0.02690529
       },
       {
@@ -166,8 +166,8 @@ export default [
         "parentId": 10,
         "coin": "03:00-04:00",
         "period": "1h",
-        "volume": 204.33 ,
-        "volume_%": "+12%",
+        "volumeAmount": 204.33 ,
+        "volumePerc": "+12",
         "price": 0.02690529
       },
       {
@@ -175,8 +175,8 @@ export default [
         "parentId": 16,
         "coin": "00:00-00:15",
         "period": "15m",
-        "volume": 55.33 ,
-        "volume_%": "+8%",
+        "volumeAmount": 55.33 ,
+        "volumePerc": "+8",
         "price": 0.02690529
       },
       {
@@ -184,8 +184,8 @@ export default [
         "parentId": 16,
         "coin": "00:15-00:30",
         "period": "15m",
-        "volume": 63.33 ,
-        "volume_%": "+10%",
+        "volumeAmount": 63.33 ,
+        "volumePerc": "+10",
         "price": 0.02690529
       },   
       {
@@ -193,8 +193,8 @@ export default [
         "parentId": 16,
         "coin": "00:30-00:45",
         "period": "15m",
-        "volume": 40.33 ,
-        "volume_%": "-30%",
+        "volumeAmount": 40.33 ,
+        "volumePerc": "-30",
         "price": 0.02690529
       },
       {
@@ -202,8 +202,8 @@ export default [
         "parentId": 16,
         "coin": "00:45-00:00",
         "period": "15m",
-        "volume": 55.33 ,
-        "volume_%": "+20%",
+        "volumeAmount": 55.33 ,
+        "volumePerc": "+20",
         "price": 0.02690529
       },
       {
@@ -211,8 +211,8 @@ export default [
         "parentId": 20,
         "coin": "00:00-00:15",
         "period": "5m",
-        "volume": 20.33 ,
-        "volume_%": "+6%",
+        "volumeAmount": 20.33 ,
+        "volumePerc": "+6",
         "price": 0.02690529
       },
       {
@@ -220,8 +220,8 @@ export default [
         "parentId": 20,
         "coin": "00:00-00:15",
         "period": "5m",
-        "volume": 25.33 ,
-        "volume_%": "+30%",
+        "volumeAmount": 25.33 ,
+        "volumePerc": "+30",
         "price": 0.02690529
       },
       {
@@ -229,8 +229,8 @@ export default [
         "parentId": 20,
         "coin": "00:00-00:15",
         "period": "5m",
-        "volume": 20.33 ,
-        "volume_%": "-20%",
+        "volumeAmount": 20.33 ,
+        "volumePerc": "-20",
         "price": 0.02690529
       },
        {
@@ -238,8 +238,8 @@ export default [
         "parentId": null,
         "coin": "Litecoin (LTC)",
         "period": "1d",
-        "volume": 6465.04 ,
-        "volume_%": "+15%",
+        "volumeAmount": 6465.04 ,
+        "volumePerc": "+15",
         "price": 0.02690229
       },
       {
@@ -247,8 +247,8 @@ export default [
         "parentId": null,
         "coin": "Binance Coin (BNB)",
         "period": "1d",
-        "volume": 6465.04 ,
-        "volume_%": "+15%",
+        "volumeAmount": 6465.04 ,
+        "volumePerc": "+15",
         "price": 0.02690229
       },
       {
@@ -256,8 +256,8 @@ export default [
         "parentId": null,
         "coin": "Etherium (ETH)",
         "period": "1d",
-        "volume": 6465.04 ,
-        "volume_%": "+15%",
+        "volumeAmount": 6465.04 ,
+        "volumePerc": "+15",
         "price": 0.02690229
       },
       {
@@ -265,8 +265,8 @@ export default [
         "parentId": null,
         "coin": "Etherium (ETH)",
         "period": "1d",
-        "volume": 6465.04 ,
-        "volume_%": "+15%",
+        "volumeAmount": 6465.04 ,
+        "volumePerc": "+15",
         "price": 0.02690229
       },
       {
@@ -274,8 +274,8 @@ export default [
         "parentId": null,
         "coin": "Etherium (ETH)",
         "period": "1d",
-        "volume": 6465.04 ,
-        "volume_%": "+15%",
+        "volumeAmount": 6465.04 ,
+        "volumePerc": "+15",
         "price": 0.02690229
       },
       {
@@ -283,8 +283,8 @@ export default [
         "parentId": null,
         "coin": "Etherium (ETH)",
         "period": "1d",
-        "volume": 6465.04 ,
-        "volume_%": "+15%",
+        "volumeAmount": 6465.04 ,
+        "volumePerc": "+15",
         "price": 0.02690229
       },
       {
@@ -292,8 +292,8 @@ export default [
         "parentId": null,
         "coin": "Etherium (ETH)",
         "period": "1d",
-        "volume": 6465.04 ,
-        "volume_%": "+15%",
+        "volumeAmount": 6465.04 ,
+        "volumePerc": "+15",
         "price": 0.02690229
       },
       {
@@ -301,8 +301,8 @@ export default [
         "parentId": null,
         "coin": "Etherium (ETH)",
         "period": "1d",
-        "volume": 6465.04 ,
-        "volume_%": "+15%",
+        "volumeAmount": 6465.04 ,
+        "volumePerc": "+15",
         "price": 0.02690229
       },
       {
@@ -310,8 +310,8 @@ export default [
         "parentId": null,
         "coin": "Etherium (ETH)",
         "period": "1d",
-        "volume": 6465.04 ,
-        "volume_%": "+15%",
+        "volumeAmount": 6465.04 ,
+        "volumePerc": "+15",
         "price": 0.02690229
       },
       {
@@ -319,8 +319,8 @@ export default [
         "parentId": null,
         "coin": "Etherium (ETH)",
         "period": "1d",
-        "volume": 6465.04 ,
-        "volume_%": "+15%",
+        "volumeAmount": 6465.04 ,
+        "volumePerc": "+15",
         "price": 0.02690229
       },
       {
@@ -328,8 +328,8 @@ export default [
         "parentId": null,
         "coin": "Etherium (ETH)",
         "period": "1d",
-        "volume": 6465.04 ,
-        "volume_%": "+15%",
+        "volumeAmount": 6465.04 ,
+        "volumePerc": "+15",
         "price": 0.02690229
       },
       {
@@ -337,8 +337,8 @@ export default [
         "parentId": null,
         "coin": "Etherium (ETH)",
         "period": "1d",
-        "volume": 6465.04 ,
-        "volume_%": "+15%",
+        "volumeAmount": 6465.04 ,
+        "volumePerc": "+15",
         "price": 0.02690229
       },
       {
@@ -346,8 +346,8 @@ export default [
         "parentId": null,
         "coin": "Etherium (ETH)",
         "period": "1d",
-        "volume": 6465.04 ,
-        "volume_%": "+15%",
+        "volumeAmount": 6465.04 ,
+        "volumePerc": "+15",
         "price": 0.02690229
       },
       {
@@ -355,8 +355,8 @@ export default [
         "parentId": null,
         "coin": "Bitcoin (BTC)",
         "period": "1d",
-        "volume": 6465.04 ,
-        "volume_%": "+15%",
+        "volumeAmount": 6465.04 ,
+        "volumePerc": "+15",
         "price": 0.02690229
       },
       {
@@ -364,8 +364,8 @@ export default [
           "parentId": 28,
           "coin": "06.05-12.05",
           "period": "1w",
-          "volume": 45355.33 ,
-          "volume_%": "+12%",
+          "volumeAmount": 45355.33 ,
+          "volumePerc": "+12",
           "price": 0.02690529
         },
         {
@@ -373,8 +373,8 @@ export default [
           "parentId": 102,
           "coin": "06.05",
           "period": "1d",
-          "volume": 6323.33 ,
-          "volume_%": "+7%",
+          "volumeAmount": 6323.33 ,
+          "volumePerc": "+7",
           "price": 0.02690529
         },
         {
@@ -382,8 +382,8 @@ export default [
           "parentId": 102,
           "coin": "07.05",
           "period": "1d",
-          "volume": 5899.33 ,
-          "volume_%": "+3%",
+          "volumeAmount": 5899.33 ,
+          "volumePerc": "+3",
           "price": 0.02690529
         },
         {
@@ -391,8 +391,8 @@ export default [
           "parentId": 102,
           "coin": "08.05",
           "period": "1d",
-          "volume": 4642.33 ,
-          "volume_%": "+10%",
+          "volumeAmount": 4642.33 ,
+          "volumePerc": "+10",
           "price": 0.02690529
         },
         {
@@ -400,8 +400,8 @@ export default [
           "parentId": 102,
           "coin": "09.05",
           "period": "1d",
-          "volume": 5700.33 ,
-          "volume_%": "-5%",
+          "volumeAmount": 5700.33 ,
+          "volumePerc": "-5",
           "price": 0.02690529
         },
       {
@@ -409,8 +409,8 @@ export default [
         "parentId": 102,
         "coin": "10.05",
         "period": "1d",
-        "volume": 8532.33 ,
-        "volume_%": "-15%",
+        "volumeAmount": 8532.33 ,
+        "volumePerc": "-15",
         "price": 0.02690529
       },
       {
@@ -418,8 +418,8 @@ export default [
           "parentId": 102,
           "coin": "11.05",
           "period": "1d",
-          "volume": 5321.33 ,
-          "volume_%": "+25%",
+          "volumeAmount": 5321.33 ,
+          "volumePerc": "+25",
           "price": 0.02690529
         },
         {
@@ -427,8 +427,8 @@ export default [
           "parentId": 102,
           "coin": "12.05",
           "period": "1d",
-          "volume": 3542.33 ,
-          "volume_%": "+13%",
+          "volumeAmount": 3542.33 ,
+          "volumePerc": "+13",
           "price": 0.02690529
         },
         {
@@ -436,8 +436,8 @@ export default [
           "parentId": 103,
           "coin": "00:00-04:00",
           "period": "4h",
-          "volume": 1580.33 ,
-          "volume_%": "+4%",
+          "volumeAmount": 1580.33 ,
+          "volumePerc": "+4",
           "price": 0.02690529
         },
         {
@@ -445,8 +445,8 @@ export default [
           "parentId": 103,
           "coin": "04:00-08:00",
           "period": "4h",
-          "volume": 1202.33 ,
-          "volume_%": "+10%",
+          "volumeAmount": 1202.33 ,
+          "volumePerc": "+10",
           "price": 0.02690529
         },
         {
@@ -454,8 +454,8 @@ export default [
           "parentId": 103,
           "coin": "08:00-12:00",
           "period": "4h",
-          "volume": 1502.33 ,
-          "volume_%": "-13%",
+          "volumeAmount": 1502.33 ,
+          "volumePerc": "-13",
           "price": 0.02690529
         },
         {
@@ -463,8 +463,8 @@ export default [
           "parentId": 103,
           "coin": "12:00-16:00",
           "period": "4h",
-          "volume": 1802.33 ,
-          "volume_%": "+6%",
+          "volumeAmount": 1802.33 ,
+          "volumePerc": "+6",
           "price": 0.02690529
         },
         {
@@ -472,8 +472,8 @@ export default [
           "parentId": 103,
           "coin": "16:00-20:00",
           "period": "4h",
-          "volume": 1982.33 ,
-          "volume_%": "+2%",
+          "volumeAmount": 1982.33 ,
+          "volumePerc": "+2",
           "price": 0.02690529
         },
         {
@@ -481,8 +481,8 @@ export default [
           "parentId": 103,
           "coin": "20:00-24:00",
           "period": "4h",
-          "volume": 1023.33 ,
-          "volume_%": "-21%",
+          "volumeAmount": 1023.33 ,
+          "volumePerc": "-21",
           "price": 0.02690529
         },
         {
@@ -490,8 +490,8 @@ export default [
           "parentId": 110,
           "coin": "00:00-01:00",
           "period": "1h",
-          "volume": 250.33 ,
-          "volume_%": "+3%",
+          "volumeAmount": 250.33 ,
+          "volumePerc": "+3",
           "price": 0.02690529
         },
         {
@@ -499,8 +499,8 @@ export default [
           "parentId": 110,
           "coin": "01:00-02:00",
           "period": "1h",
-          "volume": 300.33 ,
-          "volume_%": "+15%",
+          "volumeAmount": 300.33 ,
+          "volumePerc": "+15",
           "price": 0.02690529
         },
         {
@@ -508,8 +508,8 @@ export default [
           "parentId": 110,
           "coin": "02:00-03:00",
           "period": "1h",
-          "volume": 182.33 ,
-          "volume_%": "-50%",
+          "volumeAmount": 182.33 ,
+          "volumePerc": "-50",
           "price": 0.02690529
         },
         {
@@ -517,8 +517,8 @@ export default [
           "parentId": 110,
           "coin": "03:00-04:00",
           "period": "1h",
-          "volume": 204.33 ,
-          "volume_%": "+12%",
+          "volumeAmount": 204.33 ,
+          "volumePerc": "+12",
           "price": 0.02690529
         },
         {
@@ -526,8 +526,8 @@ export default [
           "parentId": 116,
           "coin": "00:00-00:15",
           "period": "15m",
-          "volume": 55.33 ,
-          "volume_%": "+8%",
+          "volumeAmount": 55.33 ,
+          "volumePerc": "+8",
           "price": 0.02690529
         },
         {
@@ -535,8 +535,8 @@ export default [
           "parentId": 116,
           "coin": "00:15-00:30",
           "period": "15m",
-          "volume": 63.33 ,
-          "volume_%": "+10%",
+          "volumeAmount": 63.33 ,
+          "volumePerc": "+10",
           "price": 0.02690529
         },   
         {
@@ -544,8 +544,8 @@ export default [
           "parentId": 116,
           "coin": "00:30-00:45",
           "period": "15m",
-          "volume": 40.33 ,
-          "volume_%": "-30%",
+          "volumeAmount": 40.33 ,
+          "volumePerc": "-30",
           "price": 0.02690529
         },
         {
@@ -553,8 +553,8 @@ export default [
           "parentId": 116,
           "coin": "00:45-00:00",
           "period": "15m",
-          "volume": 55.33 ,
-          "volume_%": "+20%",
+          "volumeAmount": 55.33 ,
+          "volumePerc": "+20",
           "price": 0.02690529
         },
         {
@@ -562,8 +562,8 @@ export default [
           "parentId": 120,
           "coin": "00:00-00:15",
           "period": "5m",
-          "volume": 20.33 ,
-          "volume_%": "+6%",
+          "volumeAmount": 20.33 ,
+          "volumePerc": "+6",
           "price": 0.02690529
         },
         {
@@ -571,8 +571,8 @@ export default [
           "parentId": 120,
           "coin": "00:00-00:15",
           "period": "5m",
-          "volume": 25.33 ,
-          "volume_%": "+30%",
+          "volumeAmount": 25.33 ,
+          "volumePerc": "+30",
           "price": 0.02690529
         },
         {
@@ -580,8 +580,8 @@ export default [
           "parentId": 120,
           "coin": "00:00-00:15",
           "period": "5m",
-          "volume": 20.33 ,
-          "volume_%": "-20%",
+          "volumeAmount": 20.33 ,
+          "volumePerc": "-20",
           "price": 0.02690529
         },
         {
@@ -589,8 +589,8 @@ export default [
             "parentId": 29,
             "coin": "06.05-12.05",
             "period": "1w",
-            "volume": 45355.33 ,
-            "volume_%": "+12%",
+            "volumeAmount": 45355.33 ,
+            "volumePerc": "+12",
             "price": 0.02690529
           },
           {
@@ -598,8 +598,8 @@ export default [
             "parentId": 202,
             "coin": "06.05",
             "period": "1d",
-            "volume": 6323.33 ,
-            "volume_%": "+7%",
+            "volumeAmount": 6323.33 ,
+            "volumePerc": "+7",
             "price": 0.02690529
           },
           {
@@ -607,8 +607,8 @@ export default [
             "parentId": 202,
             "coin": "07.05",
             "period": "1d",
-            "volume": 5899.33 ,
-            "volume_%": "+3%",
+            "volumeAmount": 5899.33 ,
+            "volumePerc": "+3",
             "price": 0.02690529
           },
           {
@@ -616,8 +616,8 @@ export default [
             "parentId": 202,
             "coin": "08.05",
             "period": "1d",
-            "volume": 4642.33 ,
-            "volume_%": "+10%",
+            "volumeAmount": 4642.33 ,
+            "volumePerc": "+10",
             "price": 0.02690529
           },
           {
@@ -625,8 +625,8 @@ export default [
             "parentId": 202,
             "coin": "09.05",
             "period": "1d",
-            "volume": 5700.33 ,
-            "volume_%": "-5%",
+            "volumeAmount": 5700.33 ,
+            "volumePerc": "-5",
             "price": 0.02690529
           },
         {
@@ -634,8 +634,8 @@ export default [
           "parentId": 202,
           "coin": "10.05",
           "period": "1d",
-          "volume": 8532.33 ,
-          "volume_%": "-15%",
+          "volumeAmount": 8532.33 ,
+          "volumePerc": "-15",
           "price": 0.02690529
         },
         {
@@ -643,8 +643,8 @@ export default [
             "parentId": 202,
             "coin": "11.05",
             "period": "1d",
-            "volume": 5321.33 ,
-            "volume_%": "+25%",
+            "volumeAmount": 5321.33 ,
+            "volumePerc": "+25",
             "price": 0.02690529
           },
           {
@@ -652,8 +652,8 @@ export default [
             "parentId": 202,
             "coin": "12.05",
             "period": "1d",
-            "volume": 3542.33 ,
-            "volume_%": "+13%",
+            "volumeAmount": 3542.33 ,
+            "volumePerc": "+13",
             "price": 0.02690529
           },
           {
@@ -661,8 +661,8 @@ export default [
             "parentId": 203,
             "coin": "00:00-04:00",
             "period": "4h",
-            "volume": 1580.33 ,
-            "volume_%": "+4%",
+            "volumeAmount": 1580.33 ,
+            "volumePerc": "+4",
             "price": 0.02690529
           },
           {
@@ -670,8 +670,8 @@ export default [
             "parentId": 203,
             "coin": "04:00-08:00",
             "period": "4h",
-            "volume": 1202.33 ,
-            "volume_%": "+10%",
+            "volumeAmount": 1202.33 ,
+            "volumePerc": "+10",
             "price": 0.02690529
           },
           {
@@ -679,8 +679,8 @@ export default [
             "parentId": 203,
             "coin": "08:00-12:00",
             "period": "4h",
-            "volume": 1502.33 ,
-            "volume_%": "-13%",
+            "volumeAmount": 1502.33 ,
+            "volumePerc": "-13",
             "price": 0.02690529
           },
           {
@@ -688,8 +688,8 @@ export default [
             "parentId": 203,
             "coin": "12:00-16:00",
             "period": "4h",
-            "volume": 1802.33 ,
-            "volume_%": "+6%",
+            "volumeAmount": 1802.33 ,
+            "volumePerc": "+6",
             "price": 0.02690529
           },
           {
@@ -697,8 +697,8 @@ export default [
             "parentId": 203,
             "coin": "16:00-20:00",
             "period": "4h",
-            "volume": 1982.33 ,
-            "volume_%": "+2%",
+            "volumeAmount": 1982.33 ,
+            "volumePerc": "+2",
             "price": 0.02690529
           },
           {
@@ -706,8 +706,8 @@ export default [
             "parentId": 203,
             "coin": "20:00-24:00",
             "period": "4h",
-            "volume": 1023.33 ,
-            "volume_%": "-21%",
+            "volumeAmount": 1023.33 ,
+            "volumePerc": "-21",
             "price": 0.02690529
           },
           {
@@ -715,8 +715,8 @@ export default [
             "parentId": 210,
             "coin": "00:00-01:00",
             "period": "1h",
-            "volume": 250.33 ,
-            "volume_%": "+3%",
+            "volumeAmount": 250.33 ,
+            "volumePerc": "+3",
             "price": 0.02690529
           },
           {
@@ -724,8 +724,8 @@ export default [
             "parentId": 210,
             "coin": "01:00-02:00",
             "period": "1h",
-            "volume": 300.33 ,
-            "volume_%": "+15%",
+            "volumeAmount": 300.33 ,
+            "volumePerc": "+15",
             "price": 0.02690529
           },
           {
@@ -733,8 +733,8 @@ export default [
             "parentId": 220,
             "coin": "02:00-03:00",
             "period": "1h",
-            "volume": 182.33 ,
-            "volume_%": "-50%",
+            "volumeAmount": 182.33 ,
+            "volumePerc": "-50",
             "price": 0.02690529
           },
           {
@@ -742,8 +742,8 @@ export default [
             "parentId": 210,
             "coin": "03:00-04:00",
             "period": "1h",
-            "volume": 204.33 ,
-            "volume_%": "+12%",
+            "volumeAmount": 204.33 ,
+            "volumePerc": "+12",
             "price": 0.02690529
           },
           {
@@ -751,8 +751,8 @@ export default [
             "parentId": 216,
             "coin": "00:00-00:15",
             "period": "15m",
-            "volume": 55.33 ,
-            "volume_%": "+8%",
+            "volumeAmount": 55.33 ,
+            "volumePerc": "+8",
             "price": 0.02690529
           },
           {
@@ -760,8 +760,8 @@ export default [
             "parentId": 216,
             "coin": "00:15-00:30",
             "period": "15m",
-            "volume": 63.33 ,
-            "volume_%": "+10%",
+            "volumeAmount": 63.33 ,
+            "volumePerc": "+10",
             "price": 0.02690529
           },   
           {
@@ -769,8 +769,8 @@ export default [
             "parentId": 216,
             "coin": "00:30-00:45",
             "period": "15m",
-            "volume": 40.33 ,
-            "volume_%": "-30%",
+            "volumeAmount": 40.33 ,
+            "volumePerc": "-30",
             "price": 0.02690529
           },
           {
@@ -778,8 +778,8 @@ export default [
             "parentId": 216,
             "coin": "00:45-00:00",
             "period": "15m",
-            "volume": 55.33 ,
-            "volume_%": "+20%",
+            "volumeAmount": 55.33 ,
+            "volumePerc": "+20",
             "price": 0.02690529
           },
           {
@@ -787,8 +787,8 @@ export default [
             "parentId": 220,
             "coin": "00:00-00:15",
             "period": "5m",
-            "volume": 20.33 ,
-            "volume_%": "+6%",
+            "volumeAmount": 20.33 ,
+            "volumePerc": "+6",
             "price": 0.02690529
           },
           {
@@ -796,8 +796,8 @@ export default [
             "parentId": 220,
             "coin": "00:00-00:15",
             "period": "5m",
-            "volume": 25.33 ,
-            "volume_%": "+30%",
+            "volumeAmount": 25.33 ,
+            "volumePerc": "+30",
             "price": 0.02690529
           },
           {
@@ -805,8 +805,8 @@ export default [
             "parentId": 220,
             "coin": "00:00-00:15",
             "period": "5m",
-            "volume": 20.33 ,
-            "volume_%": "-20%",
+            "volumeAmount": 20.33 ,
+            "volumePerc": "-20",
             "price": 0.02690529
           },
   ]
