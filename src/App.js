@@ -3,7 +3,6 @@ import Paper from '@material-ui/core/Paper';
 import {
   TreeDataState, CustomTreeData,
   FilteringState, IntegratedFiltering,
-  PagingState, IntegratedPaging,
   DataTypeProvider, DataTypeProviderProps,
 } from '@devexpress/dx-react-grid';
 import { createStyles, withStyles, WithStyles, Theme } from '@material-ui/core/styles';
@@ -13,7 +12,6 @@ import {
   TableHeaderRow,
   TableTreeColumn,
   TableFilterRow,
-  PagingPanel,
 } from '@devexpress/dx-react-grid-material-ui';
 
 // import {
@@ -84,11 +82,14 @@ export default class App extends React.PureComponent {
         { name: 'price', title: 'price' }
       ],
       tableColumnExtensions: [
-        { columnName: 'coin', width: 300 },
+        { columnName: 'coin', width: 200 },
+        { columnName: 'period', width: 330 },
+        { columnName: 'volumeAmount', width: 150 },
+        { columnName: 'volumePerc', width: 150 },
+        { columnName: 'price', width: 150 },
       ],
       defaultExpandedRowIds: [],
       data: data2,
-      pageSizes: [50, 100, 150, 0],
       filteringStateColumnExtensions: [
         { columnName: 'period', filteringEnabled: false },
       ],
@@ -100,8 +101,7 @@ export default class App extends React.PureComponent {
       data, 
       columns, 
       tableColumnExtensions, 
-      defaultExpandedRowIds, 
-      pageSizes, 
+      defaultExpandedRowIds,
       filteringStateColumnExtensions
     } = this.state;
 
@@ -115,12 +115,6 @@ export default class App extends React.PureComponent {
             defaultFilters={[]}
             columnExtensions={filteringStateColumnExtensions} />
           <IntegratedFiltering />
-          <PagingState
-            defaultCurrentPage={0}
-            defaultPageSize={50}
-          />
-          <IntegratedPaging />
-
           <CurrencyTypeProvider for="volumePerc" />
           <DataTypeProvider
             for="volumeAmount"
@@ -140,9 +134,6 @@ export default class App extends React.PureComponent {
             columnExtensions={tableColumnExtensions}
           />
           <TableHeaderRow />
-          <PagingPanel
-            pageSizes={pageSizes}
-          />
           <TableFilterRow showFilterSelector={true}/>
           <TableTreeColumn
             for="period"
